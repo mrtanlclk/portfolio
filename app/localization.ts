@@ -4,9 +4,8 @@ export type Language = 'tr' | 'en';
 export const localization = {
   tr: {
     nav: {
-      home: 'Ana Sayfa',
       about: 'Hakkımda',
-      projects: 'Projeler',
+      career: 'Kariyer',
       blog: 'Blog',
       readings: 'Okumalar',
     },
@@ -19,11 +18,11 @@ export const localization = {
     routes: {
       about: {
         title: 'Hakkımda',
-        description: 'Arayüzleri sadece çalışan ekranlar olarak değil, ritmi ve hissi olan deneyimler olarak kurmayı seviyorum.',
+        description: 'Merhaba! Ben Mert Anıl Çelik. 27 yaşındayım. 4 yılı aşkın bir süredir yazılım geliştirmeyle ilgileniyorum. Özellikle frontend teknolojileriyle çalışıyorum. Kod yazarken, sadece çalışan ekranlar değil, aynı zamanda ritmi ve hissi olan deneyimler yaratmayı seviyorum.',
         secondary: 'Yeni teknolojileri denerken sade, hızlı ve okunabilir kalmaya odaklanıyorum.',
       },
-      projects: {
-        title: 'Projeler',
+      career: {
+        title: 'Kariyer',
         description: 'Burada canlıya aldığım arayüzler, denemeler ve yan ürünler yer alır.',
         secondary: 'Her projede performans, detay ve görsel tutarlılık benim için öncelikli.',
       },
@@ -41,9 +40,8 @@ export const localization = {
   },
   en: {
     nav: {
-      home: 'Home',
       about: 'About',
-      projects: 'Projects',
+      career: 'Career',
       blog: 'Blog',
       readings: 'Readings',
     },
@@ -56,11 +54,11 @@ export const localization = {
     routes: {
       about: {
         title: 'About',
-        description: 'I like building interfaces as experiences with rhythm and feel, not just screens that work.',
+        description: 'Hi! I\'m Mert Anıl Çelik. I\'m 27 years old. 4 years ago, I started my journey in software development and have been passionate about frontend technologies ever since. When I write code, I enjoy creating experiences that not only work but also have rhythm and feel.',
         secondary: 'While trying new technologies, I focus on staying simple, fast, and readable.',
       },
-      projects: {
-        title: 'Projects',
+      career: {
+        title: 'Career',
         description: 'This is where I keep the interfaces, experiments, and side products I have shipped.',
         secondary: 'Performance, detail, and visual consistency stay at the top of my list on every project.',
       },

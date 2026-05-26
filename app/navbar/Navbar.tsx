@@ -1,7 +1,6 @@
-// Navbar, language picker, and localized navigation links.
+// Navbar, language picker, and localized navigation as.
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { localization, type Language } from '../localization';
 
@@ -16,9 +15,8 @@ export function Navbar({
     const pathname = usePathname();
 
     const navItems = [
-        { href: '/', label: localization[language].nav.home },
         { href: '/about', label: localization[language].nav.about },
-        { href: '/projects', label: localization[language].nav.projects },
+        { href: '/career', label: localization[language].nav.career },
         { href: '/blog', label: localization[language].nav.blog },
         { href: '/readings', label: localization[language].nav.readings },
     ];
@@ -29,13 +27,14 @@ export function Navbar({
         <>
         <nav className="fixed w-full z-20 top-0 start-0 bg-[var(--bg-color)]">
             <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 gap-4">
-                <Link href="/" className="flex items-center space-x-2 rtl:space-x-reverse min-w-0" onClick={() => setOpen(false)}>
+                <a href="/" className="flex items-center space-x-2 rtl:space-x-reverse min-w-0" onClick={() => setOpen(false)}>
                     <span className="text-sm lg:text-xl whitespace-nowrap overflow-hidden">
-                        <span className="text-[var(--neon-color)]">&lt;/&gt;</span>
+                        <span className="text-[var(--neon-color)]">&lt;</span>
                         <span className="text-[var(--nav-color)] ml-1">Mert</span>
                         <span className="text-[var(--accent-color)]">.Dev</span>
+                        <span className="text-[var(--neon-color)]">/&gt;</span>
                     </span>
-                </Link>
+                </a>
 
                 <div className="ml-auto flex items-center gap-3 order-2 lg:order-2">
                         <select
@@ -52,8 +51,13 @@ export function Navbar({
                         data-collapse-toggle="navbar-default"
                         type="button"
                         aria-controls="mobile-menu"
-                        aria-expanded={open}
-                        onClick={() => setOpen(!open)}
+                        aria-expanded={open ? 'true' : 'false'}
+                        onClick={(e) => {
+                            // debug: ensure click handler runs on mobile
+                            // eslint-disable-next-line no-console
+                            e.stopPropagation();
+                            setOpen(!open);
+                        }}
                         className="inline-flex items-center p-1.5 w-9 h-9 justify-center text-sm text-white rounded-md lg:hidden hover:bg-neutral-secondary-soft hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--accent-color)]"
                         aria-label={open ? 'Close menu' : 'Open menu'}
                     >
@@ -79,7 +83,7 @@ export function Navbar({
                     <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:bg-neutral-primary">
                         {navItems.map((item) => (
                             <li key={item.href}>
-                                <Link
+                                <a
                                     href={item.href}
                                     onClick={() => setOpen(false)}
                                     aria-current={isActive(item.href) ? 'page' : undefined}
@@ -90,7 +94,7 @@ export function Navbar({
                                     }
                                 >
                                     {item.label}
-                                </Link>
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -100,17 +104,17 @@ export function Navbar({
 
                 {/* Mobile menu: placed between navbar and Home, white background */}
                 {open && (
-                    <div id="mobile-menu" className="fixed top-[4.5rem] lg:hidden w-full bg-white border-b border-default z-10">
+                    <div id="mobile-menu" className="fixed top-[4.5rem] lg:hidden w-full bg-white border-b border-default z-40 pointer-events-auto">
                         <ul className="flex flex-col">
                             {navItems.map((item, index) => (
                                 <li key={item.href}>
-                                    <Link
+                                    <a
                                         href={item.href}
                                         className={`block py-3 px-4 text-black ${index < navItems.length - 1 ? 'border-b' : ''}`}
                                         onClick={() => setOpen(false)}
                                     >
                                         {item.label}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>

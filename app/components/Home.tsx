@@ -5,7 +5,7 @@ export function Home({ language }: { language: Language }) {
   return (
   <div className="flex flex-1 flex-col lg:flex-row items-center justify-start pl-0 lg:pl-20 main-content w-full min-h-screen text-white">
       {/* Mobile: show image on top; Desktop: background handles image */}
-      <img src="/assets/main-bg.png" alt="background" className="w-full lg:hidden object-cover" />
+      <img src="/assets/main-bg.png" alt="background" className="w-full lg:hidden object-[0_50px]" />
 
       <div className="max-w-xl space-y-4 p-4 lg:p-0 mx-0 text-left">
         <div className="text-sm text-[var(--accent-color)]">
