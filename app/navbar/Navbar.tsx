@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { localization, type Language } from '../localization';
+import Link from 'next/link';
 
 export function Navbar({
     language,
@@ -27,14 +28,14 @@ export function Navbar({
         <>
         <nav className="fixed w-full z-20 top-0 start-0 bg-[var(--bg-color)]">
             <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 gap-4">
-                <a href="/" className="flex items-center space-x-2 rtl:space-x-reverse min-w-0" onClick={() => setOpen(false)}>
+                <Link href="/" className="flex items-center space-x-2 rtl:space-x-reverse min-w-0" onClick={() => setOpen(false)}>
                     <span className="text-sm lg:text-xl whitespace-nowrap overflow-hidden">
                         <span className="text-[var(--neon-color)]">&lt;</span>
                         <span className="text-[var(--nav-color)] ml-1">Mert</span>
                         <span className="text-[var(--accent-color)]">.Dev</span>
                         <span className="text-[var(--neon-color)]">/&gt;</span>
                     </span>
-                </a>
+                </Link>
 
                 <div className="ml-auto flex items-center gap-3 order-2 lg:order-2">
                         <select
@@ -83,7 +84,7 @@ export function Navbar({
                     <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:bg-neutral-primary">
                         {navItems.map((item) => (
                             <li key={item.href}>
-                                <a
+                                <Link
                                     href={item.href}
                                     onClick={() => setOpen(false)}
                                     aria-current={isActive(item.href) ? 'page' : undefined}
@@ -94,7 +95,7 @@ export function Navbar({
                                     }
                                 >
                                     {item.label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -108,13 +109,13 @@ export function Navbar({
                         <ul className="flex flex-col">
                             {navItems.map((item, index) => (
                                 <li key={item.href}>
-                                    <a
+                                    <Link
                                         href={item.href}
                                         className={`block py-3 px-4 text-black ${index < navItems.length - 1 ? 'border-b' : ''}`}
                                         onClick={() => setOpen(false)}
                                     >
                                         {item.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
