@@ -23,7 +23,7 @@ body {
 
 .main-content {
   background-size: cover;
-  background-position: center;
+  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
