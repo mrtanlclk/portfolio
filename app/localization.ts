@@ -23,8 +23,21 @@ export const localization = {
       },
       career: {
         title: 'Kariyer',
-        description: 'Burada canlıya aldığım arayüzler, denemeler ve yan ürünler yer alır.',
-        secondary: 'Her projede performans, detay ve görsel tutarlılık benim için öncelikli.',
+        caretta: {
+          title: 'Caretta',
+          year: '2023 - Günümüz',
+          description: 'Caretta, e-ticaret ve pazarlama alanında yenilikçi çözümler sunan bir teknoloji şirketidir. Burada, kullanıcı deneyimini geliştiren ve iş süreçlerini optimize eden projelerde çalışıyorum.',
+        },
+        akinon: {
+          title: 'Akinon',
+          year: '2022 - 2023',
+          description: 'Akinon, perakende sektöründe dijital dönüşümü destekleyen bir teknoloji firmasıdır. Akinon\'da, perakende çözümlerinin geliştirilmesinde yer aldım ve sektöre yönelik yenilikçi projelerde görev aldım.',
+        },
+        vendrops: {
+          title: 'Vendrops',
+          year: '2021 - 2022',
+          description: 'Vendrops, şirket yönetimi ve operasyonları için dijital çözümler sunan bir teknoloji şirketidir. Vendrops\'ta, şirketlerin operasyonel verimliliğini artıran projelerde çalıştım ve yenilikçi çözümler geliştirdim.',
+        }
       },
       blog: {
         title: 'Blog',
@@ -59,8 +72,21 @@ export const localization = {
       },
       career: {
         title: 'Career',
-        description: 'This is where I keep the interfaces, experiments, and side products I have shipped.',
-        secondary: 'Performance, detail, and visual consistency stay at the top of my list on every project.',
+        caretta: {
+          title: 'Caretta',
+          year: '2023 - Present',
+          description: 'Caretta is a technology company that provides innovative solutions in e-commerce and marketing. Here, I work on projects that enhance user experience and optimize business processes.',
+        },
+        akinon: {
+          title: 'Akinon',
+          year: '2022 - 2023',
+          description: 'Akinon is a technology firm that supports digital transformation in the retail sector. At Akinon, I was involved in the development of retail solutions and took part in innovative projects aimed at the industry.',
+        },
+        vendrops: {
+          title: 'Vendrops',
+          year: '2021 - 2022',
+          description: 'Vendrops is a technology company that provides digital solutions for company management and operations. At Vendrops, I worked on projects that enhance operational efficiency for companies and developed innovative solutions.',
+        }
       },
       blog: {
         title: 'Blog',

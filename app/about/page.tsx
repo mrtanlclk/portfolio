@@ -18,7 +18,7 @@ export default function AboutPage() {
 
 export function Thumbnail({ language }: { language: 'tr' | 'en' }) {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center flex-col gap-12 pt-[4.5rem] lg:pt-0 lg:gap-20">
+    <div className="w-full min-h-screen flex items-center justify-center flex-col gap-12 pt-[5rem]">
       <div className="w-full max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-20 px-4">
         <img
           src="/assets/thumbnail.png"
@@ -66,6 +66,34 @@ export function Thumbnail({ language }: { language: 'tr' | 'en' }) {
           ))}
         </div>
 
+      </div>
+
+      <div className="w-full max-w-screen-xl flex flex-col items-center gap-4 px-4">
+        <div className="w-full border border-[var(--nav-color)] rounded-base p-4">
+          <h3 className="text-sm text-[var(--accent-color)] text-center mb-3">{language === 'tr' ? 'Linkler' : 'Links'}</h3>
+          <div className="flex items-center justify-center gap-4">
+            <a href="https://linkedin.com/in/mrtanlclk" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-[var(--nav-color)] hover:text-[var(--accent-color)]">
+              <div className="p-2 bg-neutral-secondary-soft rounded-md w-10 h-10 flex items-center justify-center">
+                <Icon name="linkedin" size={24} label="LinkedIn" />
+              </div>
+              <span className="text-xs mt-2">LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/mrtanlclk" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-[var(--nav-color)] hover:text-[var(--accent-color)]">
+              <div className="p-2 bg-neutral-secondary-soft rounded-md w-10 h-10 flex items-center justify-center">
+                <Icon name="github" size={24} label="GitHub" />
+              </div>
+              <span className="text-xs mt-2">GitHub</span>
+            </a>
+
+            <a href="https://www.goodreads.com/user/show/144443584-mert-an-l-elik" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-[var(--nav-color)] hover:text-[var(--accent-color)]">
+              <div className="p-2 bg-neutral-secondary-soft rounded-md w-10 h-10 flex items-center justify-center">
+                <Icon name="goodreads" size={24} label="Goodreads" />
+              </div>
+              <span className="text-xs mt-2">Goodreads</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

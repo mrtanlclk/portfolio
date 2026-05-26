@@ -9,6 +9,9 @@ const ICON_CDN: Record<string, string> = {
   ts: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/typescript.svg',
   angular: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/angular.svg',
   react: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/react.svg',
+  linkedin: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/linkedin.svg',
+  github: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/github.svg',
+  goodreads: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/goodreads.svg',
 };
 
 export function Icon({
