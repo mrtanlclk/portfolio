@@ -10,7 +10,7 @@ export default function CareerPage() {
       {(language) => (
         <div className="w-[80%] min-h-screen pt-[4.5rem]">
           <p className="text-sm text-[var(--accent-color)] mb-4 lg:mb-0 mt-0  lg:py-10">{localization[language].routes.career.title}</p>
-          <div className="w-full max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-20 text-white">
+          <div className="w-full max-w-screen-xl text-white">
             <Timeline language={language} />
           </div>
         </div>
