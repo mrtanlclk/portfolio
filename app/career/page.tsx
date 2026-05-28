@@ -20,7 +20,7 @@ export default function CareerPage() {
   );
 }
 
-export function Timeline({ language }: { language: 'tr' | 'en' }) {
+function Timeline({ language }: { language: 'tr' | 'en' }) {
   return (
 
     <ol className="relative border-s border-default">

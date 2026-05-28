@@ -23,7 +23,7 @@ export default function ReadingsPage() {
   );
 }
 
-export function BookCards() {
+function BookCards() {
   return (
     <div className="flex gap-12 flex-col lg:flex-row mt-10">
       <Card className="flex justify-center w-full lg:max-w-[20%] !bg-[var(--bg-color)] border-2 border-white">

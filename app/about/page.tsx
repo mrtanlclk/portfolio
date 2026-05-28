@@ -16,7 +16,7 @@ export default function AboutPage() {
   );
 }
 
-export function Thumbnail({ language }: { language: 'tr' | 'en' }) {
+function Thumbnail({ language }: { language: 'tr' | 'en' }) {
   return (
     <div className="w-full min-h-screen flex items-center justify-center flex-col gap-12 pt-[5rem]">
       <div className="w-full max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-20 px-4">
