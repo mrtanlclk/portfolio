@@ -32,7 +32,7 @@ export function LanguagePageShell({ children }: { children: (language: Language)
   return (
     <div className="min-h-screen bg-[var(--bg-color)]">
       <Navbar language={language} onLanguageChange={setLanguage} />
-      <main className="w-full flex-1 min-h-screen">{children(language)}</main>
+      <main className="w-full flex-1 min-h-screen flex justify-center">{children(language)}</main>
       <Footer language={language} />
     </div>
   );

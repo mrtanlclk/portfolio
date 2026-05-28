@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <LanguagePageShell>
       {(_language) => (
-
+        
         <Thumbnail language={_language} />
       )}
     </LanguagePageShell>
